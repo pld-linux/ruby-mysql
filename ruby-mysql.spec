@@ -3,8 +3,10 @@ Summary:	MySQL module for Ruby
 Name:		ruby-mysql
 Version:	2.4.2
 Release:	1
-License:	public domain
-Group:		Applications/Ruby
+License:        GPL
+Group:          Development/Languages
+Group(de):      Entwicklung/Sprachen
+Group(pl):      Programowanie/Jêzyki
 Source0:	http://www.tmtm.org/mysql/ruby/mysql-ruby-%{version}.tar.gz
 URL:		http://www.tmtm.org/mysql/ruby/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -13,6 +15,9 @@ Requires:	ruby
 
 %description
 MySQL module for Ruby
+
+%description -l pl
+Modu³ MySQL dla Ruby
 
 %prep
 %setup -q -n %{tarname}-%{version}
