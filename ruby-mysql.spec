@@ -1,4 +1,4 @@
-%define	ruby_sitearchdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
+%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 %define	tarname			mysql-ruby
 Summary:	MySQL module for Ruby
 Summary(pl):	Modu³ MySQL dla Ruby
@@ -11,6 +11,7 @@ Source0:	http://www.tmtm.org/mysql/ruby/%{tarname}-%{version}.tar.gz
 # Source0-md5:	b5a37d7e3fcb09ba17bba5b9338da38b
 URL:		http://www.tmtm.org/mysql/ruby/
 BuildRequires:	ruby
+BuildRequires:	ruby-devel
 BuildRequires:	mysql-devel
 Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,10 +31,11 @@ ruby extconf.rb --with-mysql-dir=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{ruby_sitearchdir}
+install -d $RPM_BUILD_ROOT%{ruby_archdir}
 
 %{__make} install \
-	archdir=$RPM_BUILD_ROOT%{ruby_sitearchdir}
+	archdir=$RPM_BUILD_ROOT%{ruby_archdir} \
+	sitearchdir=$RPM_BUILD_ROOT%{ruby_archdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README*
-%{ruby_sitearchdir}/*
+%{ruby_archdir}/*
