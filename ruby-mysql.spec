@@ -1,3 +1,4 @@
+%define	ruby_sitearchdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
 %define tarname mysql-ruby
 Summary:	MySQL module for Ruby
 Summary(pl):	Modu³ MySQL dla Ruby
@@ -6,10 +7,11 @@ Version:	2.4.2
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Source0:	http://www.tmtm.org/mysql/ruby/mysql-ruby-%{version}.tar.gz
+Source0:	http://www.tmtm.org/mysql/ruby/%{tarname}-%{version}.tar.gz
 URL:		http://www.tmtm.org/mysql/ruby/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:	ruby, mysql, mysql-devel
+BuildRequires:	ruby
+BuildRequires:	mysql-devel
 Requires:	ruby
 
 %description
@@ -27,16 +29,14 @@ ruby extconf.rb --with-mysql-dir=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-archdir=`ruby -r rbconfig -e 'p Config::CONFIG["archdir"]'`
-install -d $RPM_BUILD_ROOT/$archdir
+install -d $RPM_BUILD_ROOT/%{ruby_sitearchdir}
 
-%{__make} archdir=$RPM_BUILD_ROOT/$archdir install
-
-find $RPM_BUILD_ROOT%{_prefix} -type f -print | sed -e "s@^$RPM_BUILD_ROOT@@g" > %{name}-%{version}-filelist
+%{__make} archdir=$RPM_BUILD_ROOT/%{ruby_sitearchdir} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}-%{version}-filelist
+%files
 %defattr(644,root,root,755)
 %doc README*
+%{ruby_sitearchdir}/*
