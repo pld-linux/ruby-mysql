@@ -9,10 +9,10 @@ License:	GPL
 Group:		Development/Languages
 Source0:	http://www.tmtm.org/mysql/ruby/%{tarname}-%{version}.tar.gz
 URL:		http://www.tmtm.org/mysql/ruby/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	ruby
 BuildRequires:	mysql-devel
 Requires:	ruby
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 MySQL module for Ruby.
