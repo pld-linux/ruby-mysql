@@ -20,6 +20,7 @@ Obsoletes:	mysql-ruby
 Obsoletes:	ruby-Mysql
 Conflicts:	mysql-ruby
 Conflicts:	ruby-Mysql
+Provides:	ruby-mysql-library
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
