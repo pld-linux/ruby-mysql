@@ -1,10 +1,10 @@
 %define	ruby_sitearchdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
-%define tarname mysql-ruby
+%define	tarname			mysql-ruby
 Summary:	MySQL module for Ruby
 Summary(pl):	Modu³ MySQL dla Ruby
 Name:		ruby-mysql
 Version:	2.4.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.tmtm.org/mysql/ruby/%{tarname}-%{version}.tar.gz
