@@ -30,9 +30,10 @@ ruby extconf.rb --with-mysql-dir=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{ruby_sitearchdir}
+install -d $RPM_BUILD_ROOT%{ruby_sitearchdir}
 
-%{__make} archdir=$RPM_BUILD_ROOT/%{ruby_sitearchdir} install
+%{__make} install \
+	archdir=$RPM_BUILD_ROOT%{ruby_sitearchdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
