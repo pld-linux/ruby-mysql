@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.tmtm.org/mysql/ruby/%{tarname}-%{version}.tar.gz
+# Source0-md5:	b5a37d7e3fcb09ba17bba5b9338da38b
 URL:		http://www.tmtm.org/mysql/ruby/
 BuildRequires:	ruby
 BuildRequires:	mysql-devel
