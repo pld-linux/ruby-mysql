@@ -1,0 +1,12 @@
+diff -ur orig-ruby-mysql-0.2.5/mysql.rb ruby-mysql-0.2.5/mysql.rb
+--- orig-ruby-mysql-0.2.5/mysql.rb	2004-10-06 09:34:27.000000000 -0600
++++ ruby-mysql-0.2.5/mysql.rb	2004-11-05 15:41:15.115354312 -0700
+@@ -13,7 +13,7 @@
+   MAX_PACKET_LENGTH = 256*256*256-1
+   MAX_ALLOWED_PACKET = 1024*1024*1024
+ 
+-  MYSQL_UNIX_ADDR = "/tmp/mysql.sock"
++  MYSQL_UNIX_ADDR = "/var/lib/mysql/mysql.sock"
+   MYSQL_PORT = 3306
+   PROTOCOL_VERSION = 10
+ 
