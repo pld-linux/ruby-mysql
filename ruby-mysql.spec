@@ -6,12 +6,6 @@ Version:	2.4.2
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(es):	Desarrollo/Lenguages
-Group(fr):	Development/Langues
-Group(pl):	Programowanie/JЙzyki
-Group(pt):	Desenvolvimento/LМnguas
-Group(ru):	Разработка/Языки
 Source0:	http://www.tmtm.org/mysql/ruby/mysql-ruby-%{version}.tar.gz
 URL:		http://www.tmtm.org/mysql/ruby/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
