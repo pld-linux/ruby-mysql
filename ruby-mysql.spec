@@ -34,7 +34,7 @@ install -d $RPM_BUILD_ROOT/$archdir
 
 find $RPM_BUILD_ROOT%{_prefix} -type f -print | sed -e "s@^$RPM_BUILD_ROOT@@g" > %{name}-%{version}-filelist
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}-%{version}-filelist
