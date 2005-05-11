@@ -4,12 +4,12 @@
 Summary:	Pure Ruby MySQL library
 Summary(pl):	Biblioteka MySQL napisana w czystym Rubym
 Name:		ruby-mysql
-Version:	0.2.5
-Release:	3
+Version:	0.2.6
+Release:	1
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.tmtm.org/ruby/mysql/%{tarname}-%{version}.tar.gz
-# Source0-md5:	eb9037fe93c44018457183d502168186
+# Source0-md5:	90e139a042294ed66338f369346249f1
 Source1:	setup.rb
 Patch0:	%{name}-socketpath.patch
 URL:		http://www.tmtm.org/ruby/mysql/
