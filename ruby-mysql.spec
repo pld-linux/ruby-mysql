@@ -38,7 +38,7 @@ cp %{SOURCE1} .
 mkdir lib
 mv mysql.rb lib/
 ruby setup.rb config \
-	--rb-dir=%{ruby_rubylibdir}
+	--siterubyver=%{ruby_rubylibdir}
 ruby setup.rb setup
 
 rdoc -o rdoc lib --inline-source
