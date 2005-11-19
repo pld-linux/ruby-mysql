@@ -1,6 +1,3 @@
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	tarname			ruby-mysql
 Summary:	Pure Ruby MySQL library
 Summary(pl):	Biblioteka MySQL napisana w czystym Rubym
 Name:		ruby-mysql
@@ -8,11 +5,12 @@ Version:	0.2.6
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Source0:	http://www.tmtm.org/ruby/mysql/%{tarname}-%{version}.tar.gz
+Source0:	http://www.tmtm.org/ruby/mysql/%{name}-%{version}.tar.gz
 # Source0-md5:	90e139a042294ed66338f369346249f1
 Source1:	setup.rb
-Patch0:	%{name}-socketpath.patch
+Patch0:		%{name}-socketpath.patch
 URL:		http://www.tmtm.org/ruby/mysql/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
@@ -30,13 +28,13 @@ Pure Ruby MySQL library.
 Biblioteka MySQL napisana w czystym Rubym.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -q
 %patch0 -p1
-
-%build
 cp %{SOURCE1} .
 mkdir lib
 mv mysql.rb lib/
+
+%build
 ruby setup.rb config \
 	--siterubyver=%{ruby_rubylibdir}
 ruby setup.rb setup
