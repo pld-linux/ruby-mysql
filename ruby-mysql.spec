@@ -11,7 +11,6 @@ Source1:	setup.rb
 Patch0:		%{name}-socketpath.patch
 URL:		http://www.tmtm.org/ruby/mysql/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 Obsoletes:	mysql-ruby
