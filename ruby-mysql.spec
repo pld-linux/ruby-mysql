@@ -10,9 +10,9 @@ Source0:	http://www.tmtm.org/ruby/mysql/%{name}-%{version}.tar.gz
 Source1:	setup.rb
 Patch0:		%{name}-socketpath.patch
 URL:		http://www.tmtm.org/ruby/mysql/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 Obsoletes:	mysql-ruby
 Obsoletes:	ruby-Mysql
 Conflicts:	mysql-ruby
