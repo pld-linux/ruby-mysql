@@ -12,7 +12,7 @@ Patch0:		%{name}-socketpath.patch
 URL:		http://www.tmtm.org/ruby/mysql/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 Obsoletes:	mysql-ruby
 Obsoletes:	ruby-Mysql
 Conflicts:	mysql-ruby
