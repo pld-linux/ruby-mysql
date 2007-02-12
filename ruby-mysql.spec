@@ -1,5 +1,5 @@
 Summary:	Pure Ruby MySQL library
-Summary(pl):	Biblioteka MySQL napisana w czystym Rubym
+Summary(pl.UTF-8):   Biblioteka MySQL napisana w czystym Rubym
 Name:		ruby-mysql
 Version:	0.2.6
 Release:	2
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Pure Ruby MySQL library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka MySQL napisana w czystym Rubym.
 
 %prep
