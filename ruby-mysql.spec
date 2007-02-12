@@ -1,5 +1,5 @@
 Summary:	Pure Ruby MySQL library
-Summary(pl.UTF-8):   Biblioteka MySQL napisana w czystym Rubym
+Summary(pl.UTF-8):	Biblioteka MySQL napisana w czystym Rubym
 Name:		ruby-mysql
 Version:	0.2.6
 Release:	2
