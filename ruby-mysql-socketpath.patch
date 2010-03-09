@@ -1,12 +1,12 @@
-diff -ur orig-ruby-mysql-0.2.5/mysql.rb ruby-mysql-0.2.5/mysql.rb
---- orig-ruby-mysql-0.2.5/mysql.rb	2004-10-06 09:34:27.000000000 -0600
-+++ ruby-mysql-0.2.5/mysql.rb	2004-11-05 15:41:15.115354312 -0700
-@@ -13,7 +13,7 @@
-   MAX_PACKET_LENGTH = 256*256*256-1
-   MAX_ALLOWED_PACKET = 1024*1024*1024
+diff -ur orig-ruby-mysql-0.2.5/lib/mysql.rb ruby-mysql-0.2.5/lib/mysql.rb
+--- orig-ruby-mysql-0.2.5/lib/mysql.rb	2004-10-06 09:34:27.000000000 -0600
++++ ruby-mysql-0.2.5/lib/mysql.rb	2004-11-05 15:41:15.115354312 -0700
+@@ -17,7 +17,7 @@
+   require "#{dir}/mysql/protocol"
  
--  MYSQL_UNIX_ADDR = "/tmp/mysql.sock"
-+  MYSQL_UNIX_ADDR = "/var/lib/mysql/mysql.sock"
-   MYSQL_PORT = 3306
-   PROTOCOL_VERSION = 10
+   VERSION            = 20900               # Version number of this library
+-  MYSQL_UNIX_PORT    = "/tmp/mysql.sock"   # UNIX domain socket filename
++  MYSQL_UNIX_PORT    = "/var/lib/mysql/mysql.sock"   # UNIX domain socket filename
+   MYSQL_TCP_PORT     = 3306                # TCP socket port number
  
+   attr_reader :charset               # character set of MySQL connection
